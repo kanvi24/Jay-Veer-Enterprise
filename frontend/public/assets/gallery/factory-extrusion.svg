@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="facBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b5c" />
+      <stop offset="100%" stop-color="#0a1a36" />
+    </linearGradient>
+    <linearGradient id="machineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="heatGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FE691E" />
+      <stop offset="100%" stop-color="#ffb703" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#facBg)" />
+
+  <!-- Industrial Architecture & Gantry -->
+  <line x1="50" y1="80" x2="550" y2="80" stroke="#1e3a8a" stroke-width="6"/>
+  <line x1="120" y1="80" x2="120" y2="350" stroke="#1e3a8a" stroke-width="4"/>
+  <line x1="480" y1="80" x2="480" y2="350" stroke="#1e3a8a" stroke-width="4"/>
+  
+  <!-- Extrusion Hopper -->
+  <polygon points="180,90 280,90 250,180 210,180" fill="#94a3b8" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="200" y="70" width="60" height="20" rx="3" fill="#cbd5e1" />
+  
+  <!-- Extruder Barrel -->
+  <rect x="210" y="180" width="280" height="40" rx="6" fill="url(#machineGrad)" stroke="#475569" stroke-width="2" />
+  <rect x="260" y="175" width="40" height="50" rx="4" fill="url(#heatGlow)" />
+  <rect x="330" y="175" width="40" height="50" rx="4" fill="url(#heatGlow)" />
+  <rect x="400" y="175" width="40" height="50" rx="4" fill="url(#heatGlow)" />
+
+  <!-- Granule strands & pelletizer cutter -->
+  <path d="M490 200 L550 200" stroke="#FE691E" stroke-width="6" stroke-dasharray="8 4"/>
+  <circle cx="530" cy="200" r="28" fill="#1e293b" stroke="#FE691E" stroke-width="3" />
+  <line x1="530" y1="180" x2="530" y2="220" stroke="#ffffff" stroke-width="2"/>
+  <line x1="510" y1="200" x2="550" y2="200" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Industrial Floor -->
+  <rect x="0" y="340" width="600" height="60" fill="#091426" />
+  <line x1="0" y1="340" x2="600" y2="340" stroke="#FE691E" stroke-width="4"/>
+
+  <!-- Modern Info Overlay -->
+  <rect x="30" y="30" width="260" height="40" rx="6" fill="#ffffff" opacity="0.1" />
+  <text x="45" y="55" font-family="'Montserrat', sans-serif" font-weight="700" font-size="14" fill="#ffffff">POLYMER EXTRUSION UNIT</text>
+  <text x="45" y="375" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8">Precision compounding & high-throughput underwater pelletization</text>
+</svg>

@@ -1,0 +1,428 @@
+/* ==========================================================================
+   JAY VEER ENTERPRISE - INDUSTRIAL B2B DESIGN SYSTEM
+   Visual Reference: High-tier industrial polymer manufacturers (e.g. GPGPL standard)
+   Colors: Brand Orange (#FE691E), Deep Slate (#0c2340), White, Dark Charcoal
+   ========================================================================== */
+
+:root {
+  /* Brand Palette - Deep Base */
+  --color-primary-dark: #071526;
+  --color-primary: #0c2340;
+  --color-text-blue: #00005F;
+  --color-primary-blue: #00005F;
+  --color-primary-light: #FE691E;
+  --color-primary-subtle: #fff5ef;
+
+  /* Secondary / Accent Palette - Unified Brand Orange (#FE691E) */
+  --color-secondary: #FE691E;
+  --color-secondary-dark: #FE691E;
+  --color-secondary-light: #FE691E;
+  --color-secondary-subtle: #fff5ef;
+  --color-accent-blue: #FE691E;
+
+  /* Accent Compatibility */
+  --color-orange: #FE691E;
+  --color-orange-dark: #FE691E;
+  --color-orange-light: #FE691E;
+  --color-orange-subtle: #fff5ef;
+  --color-gold: #FE691E;
+  --color-gold-dark: #FE691E;
+
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-bg-light: #f8fafc;
+  --color-bg-alt: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-dark: #cbd5e1;
+  --color-text-dark: #0f172a;
+  --color-text-main: #1e293b;
+  --color-text-muted: #475569;
+  --color-text-light: #64748b;
+
+  /* Typography */
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Professional Subtle Shadows */
+  --shadow-sm: 0 1px 3px rgba(12, 35, 64, 0.05), 0 1px 2px rgba(12, 35, 64, 0.03);
+  --shadow-md: 0 4px 12px rgba(12, 35, 64, 0.07);
+  --shadow-lg: 0 10px 25px rgba(12, 35, 64, 0.09);
+  --shadow-xl: 0 18px 36px rgba(12, 35, 64, 0.12);
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.35s ease;
+
+  /* Crisp Industrial Radii */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* Max Widths */
+  --container-max: 1070px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-blue);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ==========================================================================
+   CONTAINER & LAYOUT
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+/* ==========================================================================
+   UNIFIED INDUSTRIAL POLYMER BACKGROUND LANGUAGE
+   ========================================================================== */
+
+/* 1. Standard Light Content Sections (Clean white base with very soft orange accent & subtle cooling light-blue corner glow) */
+.section-py {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 70% 50% at 95% 5%, rgba(243, 248, 252, 0.95) 0%, rgba(224, 242, 254, 0.25) 45%, transparent 75%),
+    radial-gradient(ellipse 60% 45% at 5% 95%, rgba(240, 247, 253, 0.85) 0%, rgba(224, 238, 250, 0.2) 40%, transparent 70%),
+    linear-gradient(180deg, #ffffff 0%, #f7faff 30%, #fff7ef 75%, #ffffff 100%);
+}
+
+.section-py-sm {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .section-py {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .section-py-sm {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
+/* Abstract faint polymer shapes, thin curved technical lines & small engineering dots */
+.section-py:not(.bg-light-alt):not(.bg-dark-industrial):not(.hero-section):not(.cta-section):not(.process-section)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/branding/products-bg-pattern.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 2. Alternating Light Content Sections (Soft industrial off-white / light-blue #F3F8FC tone + subtle blurred plastic granules) */
+.bg-light-alt {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 70% 50% at 5% 10%, rgba(243, 248, 252, 0.95) 0%, rgba(224, 242, 254, 0.3) 50%, transparent 75%),
+    radial-gradient(ellipse 65% 50% at 95% 90%, rgba(240, 247, 253, 0.85) 0%, rgba(224, 238, 250, 0.25) 45%, transparent 70%),
+    linear-gradient(180deg, #f3f8fc 0%, #fdfbf8 50%, #f4f8fc 100%) !important;
+}
+
+/* Extremely subtle blurred plastic granule / pellet texture (around 4.5% opacity, blur 14px) */
+.bg-light-alt::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-image: url('/assets/branding/hero-granules.jpg');
+  background-position: center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(14px) saturate(0.85);
+  opacity: 0.045;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Complementary abstract faint polymer shapes, curved technical lines & small engineering dots */
+.bg-light-alt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/branding/products-bg-pattern-alt.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 3. Dark & Special Sections (Preserved) */
+.bg-dark-industrial {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+}
+
+.bg-dark-industrial::before,
+.bg-dark-industrial::after,
+.process-section::before,
+.process-section::after {
+  display: none !important;
+}
+
+.bg-dark-deep {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* ==========================================================================
+   BUTTONS (INDUSTRIAL B2B SPECIFICATION)
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.68rem 1.4rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 0 2px 6px rgba(254, 105, 30, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(254, 105, 30, 0.35);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 0 2px 6px rgba(254, 105, 30, 0.25);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(254, 105, 30, 0.35);
+}
+
+.btn-blue,
+.btn-navy {
+  background-color: #0c2340;
+  background-image: linear-gradient(135deg, #0c2340 0%, #1a4275 100%);
+  color: #ffffff;
+  border: 1px solid #0c2340;
+  box-shadow: 0 4px 14px rgba(12, 35, 64, 0.28);
+}
+
+.btn-blue:hover,
+.btn-navy:hover {
+  background-color: #12345e;
+  background-image: linear-gradient(135deg, #102e54 0%, #1f508e 100%);
+  border-color: #1f508e;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(12, 35, 64, 0.38);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-text-blue);
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary,
+.btn-outline-blue {
+  background-color: transparent;
+  color: var(--color-text-blue);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-blue:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-orange,
+.btn-outline-secondary {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+.btn-outline-orange:hover,
+.btn-outline-secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.44rem 0.95rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.4px;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+  border: 1px solid #25d366;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebd5a;
+  border-color: #1ebd5a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* ==========================================================================
+   BADGES & PILLS
+   ========================================================================== */
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.badge-blue,
+.badge-orange,
+.badge-gold {
+  background-color: var(--color-secondary-subtle);
+  color: var(--color-secondary);
+  border: 1px solid rgba(254, 105, 30, 0.25);
+}
+
+.badge-dark {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.placeholder-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+}

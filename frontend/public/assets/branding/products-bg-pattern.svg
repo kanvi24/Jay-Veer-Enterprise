@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Soft granule gradients -->
+    <radialGradient id="granuleGradOrange" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FE691E" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FE691E" stop-opacity="0.05" />
+    </radialGradient>
+    <radialGradient id="granuleGradNavy" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#163e7d" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#0c2340" stop-opacity="0.05" />
+    </radialGradient>
+    <radialGradient id="granuleGradLightBlue" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05" />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. THIN CURVED TECHNICAL LINES & SPLINES -->
+  <!-- Top flowing polymer extrusion line (Orange) -->
+  <path d="M-60 180 C 320 80, 680 340, 1500 170" fill="none" stroke="#FE691E" stroke-width="1.5" stroke-opacity="0.07" />
+  
+  <!-- Subtle cooling blue technical flow spline -->
+  <path d="M-60 260 C 440 160, 860 380, 1500 240" fill="none" stroke="#0284c7" stroke-width="1.1" stroke-dasharray="8 8" stroke-opacity="0.06" />
+
+  <!-- Secondary technical spline (Dark Navy) -->
+  <path d="M-60 380 C 400 530, 960 220, 1500 420" fill="none" stroke="#0c2340" stroke-width="1.2" stroke-opacity="0.06" />
+
+  <!-- Lower dashed technical guide line (Orange) -->
+  <path d="M-40 680 C 460 560, 940 800, 1490 640" fill="none" stroke="#FE691E" stroke-width="1" stroke-dasharray="8 6" stroke-opacity="0.06" />
+
+  <!-- Gentle vertical flowing curve (Dark Navy) -->
+  <path d="M220 -50 C 380 300, 620 460, 780 950" fill="none" stroke="#0c2340" stroke-width="1" stroke-opacity="0.04" />
+  <!-- Faint cooling blue cross-flow curve -->
+  <path d="M520 -50 C 660 340, 890 520, 1050 950" fill="none" stroke="#0284c7" stroke-width="0.9" stroke-opacity="0.05" />
+  <path d="M1240 -50 C 1100 320, 1180 620, 1340 950" fill="none" stroke="#FE691E" stroke-width="1" stroke-dasharray="6 8" stroke-opacity="0.05" />
+
+  <!-- 2. ABSTRACT CONCENTRIC TECHNICAL ARCS -->
+  <!-- Top Right Engineering Motif -->
+  <g transform="translate(1360, 70)">
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#0c2340" stroke-width="1" stroke-opacity="0.05" />
+    <circle cx="0" cy="0" r="145" fill="none" stroke="#0284c7" stroke-width="0.9" stroke-opacity="0.05" />
+    <circle cx="0" cy="0" r="170" fill="none" stroke="#FE691E" stroke-width="1" stroke-dasharray="6 6" stroke-opacity="0.06" />
+    <circle cx="0" cy="0" r="230" fill="none" stroke="#0c2340" stroke-width="0.8" stroke-opacity="0.04" />
+    <line x1="-240" y1="0" x2="-100" y2="0" stroke="#0c2340" stroke-width="0.8" stroke-opacity="0.04" />
+    <line x1="0" y1="100" x2="0" y2="240" stroke="#FE691E" stroke-width="0.8" stroke-opacity="0.05" />
+  </g>
+
+  <!-- Bottom Left Engineering Motif -->
+  <g transform="translate(70, 830)">
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#FE691E" stroke-width="1" stroke-dasharray="8 6" stroke-opacity="0.06" />
+    <circle cx="0" cy="0" r="175" fill="none" stroke="#0284c7" stroke-width="0.8" stroke-opacity="0.05" />
+    <circle cx="0" cy="0" r="210" fill="none" stroke="#0c2340" stroke-width="0.8" stroke-opacity="0.05" />
+    <circle cx="0" cy="0" r="280" fill="none" stroke="#FE691E" stroke-width="0.6" stroke-opacity="0.04" />
+  </g>
+
+  <!-- 3. POLYMER MOLECULAR STRUCTURES (Interconnected Circles) -->
+  <!-- Top Left Polymer Molecular Chain -->
+  <g>
+    <line x1="110" y1="130" x2="180" y2="165" stroke="#FE691E" stroke-width="1.2" stroke-opacity="0.07" />
+    <line x1="180" y1="165" x2="250" y2="125" stroke="#0c2340" stroke-width="1.2" stroke-opacity="0.06" />
+    <line x1="250" y1="125" x2="320" y2="170" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.06" />
+    <circle cx="110" cy="130" r="8" fill="url(#granuleGradOrange)" stroke="#FE691E" stroke-width="1.2" stroke-opacity="0.07" />
+    <circle cx="180" cy="165" r="13" fill="url(#granuleGradNavy)" stroke="#0c2340" stroke-width="1.2" stroke-opacity="0.07" />
+    <circle cx="250" cy="125" r="10" fill="url(#granuleGradOrange)" stroke="#FE691E" stroke-width="1.2" stroke-opacity="0.07" />
+    <circle cx="320" cy="170" r="8" fill="url(#granuleGradLightBlue)" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.06" />
+    <circle cx="180" cy="165" r="28" fill="none" stroke="#0c2340" stroke-width="0.8" stroke-dasharray="4 4" stroke-opacity="0.05" />
+  </g>
+
+  <!-- Bottom Right Polymer Molecular Chain -->
+  <g>
+    <line x1="1160" y1="690" x2="1230" y2="730" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.06" />
+    <line x1="1230" y1="730" x2="1300" y2="680" stroke="#FE691E" stroke-width="1.2" stroke-opacity="0.07" />
+    <line x1="1300" y1="680" x2="1370" y2="720" stroke="#0c2340" stroke-width="1.2" stroke-opacity="0.06" />
+    <circle cx="1160" cy="690" r="9" fill="url(#granuleGradLightBlue)" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.06" />
+    <circle cx="1230" cy="730" r="15" fill="url(#granuleGradOrange)" stroke="#FE691E" stroke-width="1.2" stroke-opacity="0.08" />
+    <circle cx="1300" cy="680" r="11" fill="url(#granuleGradNavy)" stroke="#0c2340" stroke-width="1.2" stroke-opacity="0.07" />
+    <circle cx="1370" cy="720" r="7" fill="url(#granuleGradOrange)" stroke="#FE691E" stroke-width="1.2" stroke-opacity="0.07" />
+    <circle cx="1230" cy="730" r="34" fill="none" stroke="#FE691E" stroke-width="0.8" stroke-dasharray="5 5" stroke-opacity="0.06" />
+  </g>
+
+  <!-- Mid-section Subtle Molecular Ring / Hexagon Motif -->
+  <g transform="translate(680, 220)" stroke="#0c2340" stroke-width="0.9" stroke-opacity="0.05" fill="none">
+    <polygon points="0,-22 19,-11 19,11 0,22 -19,11 -19,-11" />
+    <circle cx="0" cy="-22" r="3" fill="#FE691E" fill-opacity="0.07" />
+    <circle cx="19" cy="-11" r="3" fill="#0284c7" fill-opacity="0.06" />
+    <circle cx="19" cy="11" r="3" fill="#FE691E" fill-opacity="0.07" />
+    <circle cx="0" cy="22" r="3" fill="#0c2340" fill-opacity="0.06" />
+    <circle cx="-19" cy="11" r="3" fill="#0284c7" fill-opacity="0.06" />
+    <circle cx="-19" cy="-11" r="3" fill="#0c2340" fill-opacity="0.06" />
+  </g>
+
+  <!-- 4. FLOATING SUBTLE GRANULE / PELLET SILHOUETTES -->
+  <!-- Left Side Granules -->
+  <ellipse cx="240" cy="480" rx="13" ry="9" transform="rotate(-20 240 480)" fill="url(#granuleGradOrange)" stroke="#FE691E" stroke-width="0.8" stroke-opacity="0.06" />
+  <ellipse cx="280" cy="505" rx="15" ry="10" transform="rotate(22 280 505)" fill="url(#granuleGradNavy)" stroke="#0c2340" stroke-width="0.8" stroke-opacity="0.05" />
+  <ellipse cx="255" cy="525" rx="12" ry="8" transform="rotate(-8 255 525)" fill="url(#granuleGradLightBlue)" stroke="#0284c7" stroke-width="0.8" stroke-opacity="0.06" />
+
+  <!-- Right Side Granules -->
+  <ellipse cx="1200" cy="340" rx="14" ry="10" transform="rotate(28 1200 340)" fill="url(#granuleGradOrange)" stroke="#FE691E" stroke-width="0.8" stroke-opacity="0.06" />
+  <ellipse cx="1240" cy="365" rx="12" ry="9" transform="rotate(-18 1240 365)" fill="url(#granuleGradLightBlue)" stroke="#0284c7" stroke-width="0.8" stroke-opacity="0.06" />
+  <ellipse cx="1220" cy="395" rx="15" ry="11" transform="rotate(15 1220 395)" fill="url(#granuleGradNavy)" stroke="#0c2340" stroke-width="0.8" stroke-opacity="0.05" />
+
+  <!-- Subtle Top & Bottom Scattered Pellets -->
+  <ellipse cx="780" cy="80" rx="11" ry="8" transform="rotate(12 780 80)" fill="url(#granuleGradNavy)" stroke="#0c2340" stroke-width="0.7" stroke-opacity="0.05" />
+  <ellipse cx="820" cy="100" rx="10" ry="7" transform="rotate(-10 820 100)" fill="url(#granuleGradLightBlue)" stroke="#0284c7" stroke-width="0.7" stroke-opacity="0.05" />
+  <ellipse cx="610" cy="820" rx="13" ry="9" transform="rotate(-15 610 820)" fill="url(#granuleGradOrange)" stroke="#FE691E" stroke-width="0.7" stroke-opacity="0.06" />
+
+  <!-- 5. SMALL DOTTED ELEMENTS (Industrial Engineering Grid Matrix with Faint Blue Accents) -->
+  <g fill="#0c2340" fill-opacity="0.05">
+    <circle cx="90" cy="420" r="1.5" />
+    <circle cx="120" cy="420" r="1.5" />
+    <circle cx="150" cy="420" r="1.5" />
+    <circle cx="180" cy="420" r="1.5" />
+    <circle cx="90" cy="450" r="1.5" />
+    <circle cx="120" cy="450" r="1.5" />
+    <circle cx="150" cy="450" r="1.5" />
+    <circle cx="180" cy="450" r="1.5" />
+    <circle cx="90" cy="480" r="1.5" />
+    <circle cx="120" cy="480" r="1.5" />
+    <circle cx="150" cy="480" r="1.5" />
+    <circle cx="180" cy="480" r="1.5" />
+  </g>
+  <g fill="#FE691E" fill-opacity="0.06">
+    <circle cx="1280" cy="480" r="1.5" />
+    <circle cx="1310" cy="480" r="1.5" />
+    <circle cx="1340" cy="480" r="1.5" />
+    <circle cx="1370" cy="480" r="1.5" />
+    <circle cx="1280" cy="510" r="1.5" />
+    <circle cx="1310" cy="510" r="1.5" />
+    <circle cx="1340" cy="510" r="1.5" />
+    <circle cx="1370" cy="510" r="1.5" />
+    <circle cx="1280" cy="540" r="1.5" />
+    <circle cx="1310" cy="540" r="1.5" />
+    <circle cx="1340" cy="540" r="1.5" />
+    <circle cx="1370" cy="540" r="1.5" />
+  </g>
+  <!-- Faint Blue Engineering Dots -->
+  <g fill="#0284c7" fill-opacity="0.06">
+    <circle cx="680" cy="640" r="1.4" />
+    <circle cx="705" cy="640" r="1.4" />
+    <circle cx="730" cy="640" r="1.4" />
+    <circle cx="755" cy="640" r="1.4" />
+    <circle cx="680" cy="665" r="1.4" />
+    <circle cx="705" cy="665" r="1.4" />
+    <circle cx="730" cy="665" r="1.4" />
+    <circle cx="755" cy="665" r="1.4" />
+  </g>
+</svg>

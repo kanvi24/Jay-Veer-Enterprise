@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="labBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b5c" />
+      <stop offset="100%" stop-color="#0a1a36" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#labBg)" />
+
+  <!-- Laboratory Table -->
+  <rect x="50" y="260" width="500" height="15" fill="#e2e8f0" rx="3"/>
+  <rect x="80" y="275" width="20" height="70" fill="#64748b" />
+  <rect x="500" y="275" width="20" height="70" fill="#64748b" />
+
+  <!-- MFI Tester / Melt Flow Indexer Machine -->
+  <rect x="120" y="100" width="120" height="160" rx="6" fill="#334155" stroke="#475569" stroke-width="2"/>
+  <rect x="140" y="120" width="80" height="40" rx="4" fill="#0284c7" />
+  <text x="180" y="145" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#ffffff" text-anchor="middle">2.18 g/10m</text>
+  <circle cx="180" cy="190" r="14" fill="#FE691E" />
+  <rect x="175" y="210" width="10" height="40" fill="#94a3b8" />
+
+  <!-- Digital Precision Scale with Granule sample dish -->
+  <rect x="290" y="190" width="140" height="70" rx="6" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="315" y="200" width="90" height="25" rx="3" fill="#1e293b" />
+  <text x="360" y="217" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle">0.924 g/cm³</text>
+  <ellipse cx="360" cy="188" rx="45" ry="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+  <!-- Granules on scale -->
+  <circle cx="345" cy="187" r="4" fill="#FE691E" />
+  <circle cx="355" cy="186" r="4.5" fill="#FE691E" />
+  <circle cx="365" cy="187" r="4" fill="#FE691E" />
+  <circle cx="372" cy="186" r="3.5" fill="#FE691E" />
+
+  <!-- Microscope / Inspection unit -->
+  <path d="M470 260 L470 170 L490 170 L490 190" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <circle cx="470" cy="150" r="12" fill="#FE691E" />
+  <rect x="455" y="220" width="40" height="8" rx="2" fill="#38bdf8" />
+
+  <!-- Industrial Floor -->
+  <rect x="0" y="340" width="600" height="60" fill="#091426" />
+  <line x1="0" y1="340" x2="600" y2="340" stroke="#FE691E" stroke-width="4"/>
+
+  <rect x="30" y="30" width="300" height="40" rx="6" fill="#ffffff" opacity="0.1" />
+  <text x="45" y="55" font-family="'Montserrat', sans-serif" font-weight="700" font-size="14" fill="#ffffff">POLYMER TESTING LABORATORY</text>
+  <text x="45" y="375" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8">Testing MFI, density, tensile strength, moisture levels & ash content</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad5" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </radialGradient>
+    <filter id="shadowWheel" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.18" />
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad5)" />
+  
+  <!-- Subtle Industrial Grid -->
+  <path d="M0 100 H600 M0 200 H600 M0 300 H600" stroke="#cbd5e1" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+  <path d="M150 0 V400 M300 0 V400 M450 0 V400" stroke="#cbd5e1" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+
+  <!-- Color Wheel / Spectrum Disc -->
+  <g transform="translate(300, 230)" filter="url(#shadowWheel)">
+    <!-- 8 Segments of the custom shade wheel -->
+    <!-- Red segment -->
+    <path d="M0 0 L0 -110 A110 110 0 0 1 77.8 -77.8 Z" fill="#ef4444" />
+    <!-- Orange segment -->
+    <path d="M0 0 L77.8 -77.8 A110 110 0 0 1 110 0 Z" fill="#f97316" />
+    <!-- Yellow segment -->
+    <path d="M0 0 L110 0 A110 110 0 0 1 77.8 77.8 Z" fill="#eab308" />
+    <!-- Green segment -->
+    <path d="M0 0 L77.8 77.8 A110 110 0 0 1 0 110 Z" fill="#22c55e" />
+    <!-- Cyan/Teal segment -->
+    <path d="M0 0 L0 110 A110 110 0 0 1 -77.8 77.8 Z" fill="#06b6d4" />
+    <!-- Blue segment -->
+    <path d="M0 0 L-77.8 77.8 A110 110 0 0 1 -110 0 Z" fill="#3b82f6" />
+    <!-- Purple segment -->
+    <path d="M0 0 L-110 0 A110 110 0 0 1 -77.8 -77.8 Z" fill="#a855f7" />
+    <!-- Magenta segment -->
+    <path d="M0 0 L-77.8 -77.8 A110 110 0 0 1 0 -110 Z" fill="#ec4899" />
+    
+    <!-- Inner White Cutout -->
+    <circle cx="0" cy="0" r="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" />
+    
+    <!-- Shield / Center Brand Badge -->
+    <path d="M-14 -12 L0 -20 L14 -12 L14 8 C14 18 0 24 0 24 C0 24 -14 18 -14 8 Z" fill="#0f2b5c" />
+    <text x="0" y="7" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12" fill="#FE691E" text-anchor="middle">JV</text>
+  </g>
+
+  <!-- Color Swatch Pills surrounding -->
+  <g transform="translate(100, 210)">
+    <rect x="0" y="0" width="30" height="70" rx="15" fill="#3b82f6" stroke="#ffffff" stroke-width="2" />
+    <circle cx="15" cy="18" r="8" fill="#ffffff" opacity="0.3" />
+  </g>
+  <g transform="translate(125, 235)">
+    <rect x="0" y="0" width="30" height="70" rx="15" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+    <circle cx="15" cy="18" r="8" fill="#ffffff" opacity="0.3" />
+  </g>
+  <g transform="translate(470, 210)">
+    <rect x="0" y="0" width="30" height="70" rx="15" fill="#f97316" stroke="#ffffff" stroke-width="2" />
+    <circle cx="15" cy="18" r="8" fill="#ffffff" opacity="0.3" />
+  </g>
+  <g transform="translate(445, 235)">
+    <rect x="0" y="0" width="30" height="70" rx="15" fill="#e11d48" stroke="#ffffff" stroke-width="2" />
+    <circle cx="15" cy="18" r="8" fill="#ffffff" opacity="0.3" />
+  </g>
+
+  <rect x="30" y="30" width="230" height="42" rx="8" fill="#0f2b5c" />
+  <text x="45" y="56" font-family="'Montserrat', sans-serif" font-weight="700" font-size="14" fill="#ffffff">CUSTOM PLASTIC COLORS</text>
+  
+  <rect x="420" y="30" width="150" height="32" rx="16" fill="#FE691E" />
+  <text x="495" y="51" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#ffffff" text-anchor="middle">EXACT MATCHING</text>
+</svg>
