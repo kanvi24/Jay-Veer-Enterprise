@@ -126,13 +126,18 @@ export default function AboutPage({ onOpenQuoteModal }) {
                 <img
                   src="/assets/branding/poster.png"
                   alt="Jay Veer Enterprise Manufacturing & Compounding Facility"
-                  style={{ width: "100%", borderRadius: "var(--radius-lg)", border: "1px solid var(--color-border)" }}
+                  style={{
+                    width: "100%",
+                    aspectRatio: "3 / 4",
+                    minHeight: "520px",
+                    maxHeight: "580px",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    borderRadius: "var(--radius-lg)",
+                    border: "1px solid var(--color-border)",
+                    display: "block"
+                  }}
                 />
-                <div style={{ textAlign: "center", marginTop: "1rem" }}>
-                  <span style={{ fontSize: "0.85rem", color: "var(--color-text-blue)", fontWeight: 700 }}>
-                    Official {companyName} Brand Identity
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -157,19 +162,14 @@ export default function AboutPage({ onOpenQuoteModal }) {
           )}
 
           {!productsLoading && products.length > 0 && (
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: "1.5rem"
-              }}
-            >
+            <div className="about-provide-grid">
               {products.map((item) => {
                 const itemSlug = item.slug || item.id;
                 const itemImg = getMediaUrl(item.image, item.slug);
                 return (
                   <div
                     key={item.id}
+                    className="about-provide-card"
                     style={{
                       background: "#ffffff",
                       padding: "1.5rem",

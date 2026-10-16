@@ -23,17 +23,17 @@ export default function ApplicationsPage({ onOpenQuoteModal }) {
   const getAppIcon = (iconName) => {
     switch (iconName) {
       case "Package":
-        return <Package size={30} />;
+        return <Package size={24} />;
       case "Box":
-        return <Box size={30} />;
+        return <Box size={24} />;
       case "Home":
-        return <Home size={30} />;
+        return <Home size={24} />;
       case "Factory":
-        return <Factory size={30} />;
+        return <Factory size={24} />;
       case "Cpu":
-        return <Cpu size={30} />;
+        return <Cpu size={24} />;
       default:
-        return <Layers size={30} />;
+        return <Layers size={24} />;
     }
   };
 
@@ -117,47 +117,46 @@ export default function ApplicationsPage({ onOpenQuoteModal }) {
           <div className="applications-five-grid">
             {companyData.applications.map((app) => (
               <div key={app.id} className="applications-five-card">
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem", gap: "0.5rem" }}>
-                  <div
-                    style={{
-                      width: "46px",
-                      height: "46px",
-                      borderRadius: "var(--radius-md)",
-                      backgroundColor: "var(--color-orange-subtle)",
-                      color: "var(--color-orange)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0
-                    }}
-                  >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.85rem", gap: "0.5rem" }}>
+                  <div className="applications-icon-box">
                     {getAppIcon(app.icon)}
                   </div>
-                  <span className="badge-tag badge-blue" style={{ fontSize: "0.65rem", padding: "0.25rem 0.5rem", textAlign: "right", lineHeight: "1.2" }}>
+                  <span
+                    style={{
+                      fontSize: "0.68rem",
+                      fontWeight: 800,
+                      color: "var(--color-orange)",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.8px",
+                      textAlign: "right",
+                      lineHeight: "1.2",
+                      background: "transparent"
+                    }}
+                  >
                     {app.category}
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: "1.15rem", color: "var(--color-text-blue)", marginBottom: "0.65rem", lineHeight: 1.25, fontWeight: 700 }}>
+                <h3 style={{ fontSize: "1.05rem", color: "var(--color-text-blue)", marginBottom: "0.5rem", lineHeight: 1.25, fontWeight: 700 }}>
                   {app.title}
                 </h3>
-                <p style={{ color: "var(--color-text-muted)", fontSize: "0.85rem", lineHeight: "1.5", marginBottom: "1.25rem", flexGrow: 1 }}>
+                <p style={{ color: "var(--color-text-muted)", fontSize: "0.82rem", lineHeight: "1.45", marginBottom: "1rem", flexGrow: 1 }}>
                   {app.desc}
                 </p>
 
                 <div
                   style={{
                     background: "var(--color-bg-light)",
-                    padding: "0.85rem",
+                    padding: "0.65rem 0.75rem",
                     borderRadius: "var(--radius-md)",
                     borderLeft: "3px solid var(--color-primary)",
                     marginBottom: 0
                   }}
                 >
-                  <div style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", color: "var(--color-text-muted)", marginBottom: "0.25rem" }}>
+                  <div style={{ fontSize: "0.62rem", fontWeight: 700, textTransform: "uppercase", color: "var(--color-text-muted)", marginBottom: "0.2rem" }}>
                     Recommended Granule Types:
                   </div>
-                  <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--color-text-blue)", lineHeight: "1.35" }}>
+                  <div style={{ fontSize: "0.76rem", fontWeight: 700, color: "var(--color-text-blue)", lineHeight: "1.3" }}>
                     {app.recommendedMaterials.join(" • ")}
                   </div>
                 </div>

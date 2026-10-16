@@ -349,13 +349,6 @@ export default function HomePage({ onOpenQuoteModal, onSelectProductForQuote }) 
                   alt="Jay Veer Industrial Plastic Extrusion Machinery & Compounding Facility"
                   className="about-image"
                 />
-                <div className="about-image-overlay-box">
-                  <Factory size={22} className="about-icon" />
-                  <div>
-                    <span className="about-overlay-title">Industrial Compounding</span>
-                    <span className="about-overlay-sub">Reliable Raw Material Supply Chain</span>
-                  </div>
-                </div>
               </div>
             </div>
 

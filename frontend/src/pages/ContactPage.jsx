@@ -196,7 +196,15 @@ export default function ContactPage() {
                 <span style={{ fontSize: "0.8rem", color: "var(--color-orange)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "1px" }}>
                   Key Contacts
                 </span>
-                <h2 style={{ fontSize: "1.8rem", color: "var(--color-text-blue)", textTransform: "uppercase", marginTop: "0.25rem" }}>
+                <h2
+                  style={{
+                    fontSize: "clamp(1.25rem, 2vw, 1.62rem)",
+                    color: "var(--color-text-blue)",
+                    textTransform: "uppercase",
+                    marginTop: "0.25rem",
+                    whiteSpace: "nowrap"
+                  }}
+                >
                   Speak Directly With Us
                 </h2>
                 <p style={{ color: "var(--color-text-muted)", fontSize: "0.95rem", lineHeight: "1.6", marginTop: "0.5rem" }}>

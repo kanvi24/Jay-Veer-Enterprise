@@ -471,7 +471,7 @@
 
 .hero-gpgpl-title {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 3.15rem;
   font-weight: 900;
   -webkit-text-stroke: 0.5px #ffffff;
   color: #ffffff;
@@ -484,7 +484,7 @@
 
 .hero-gpgpl-subtitle {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   font-weight: 800;
   -webkit-text-stroke: 0.25px #ffffff;
   color: #ffffff;
@@ -922,9 +922,9 @@
 
 .about-image {
   width: 100%;
-  aspect-ratio: 4 / 3.7;
-  min-height: 420px;
-  max-height: 480px;
+  aspect-ratio: 4 / 4.8;
+  min-height: 520px;
+  max-height: 580px;
   object-fit: cover;
   object-position: center;
   border-radius: var(--radius-md);
@@ -1514,8 +1514,8 @@
 .applications-five-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1.5rem;
-  max-width: 1240px;
+  gap: 1.25rem;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
   align-items: stretch;
@@ -1524,8 +1524,8 @@
 .applications-five-card {
   grid-column: span 2;
   background: var(--color-white);
-  padding: 1.75rem 1.35rem;
-  border-radius: var(--radius-xl);
+  padding: 1.35rem 1.15rem;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -1538,6 +1538,25 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--color-secondary);
+}
+
+.applications-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-orange-subtle);
+  color: var(--color-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+.applications-five-card:hover .applications-icon-box,
+.applications-icon-box:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 /* Desktop: Row 2 cards (Card 4 & Card 5) centered horizontally under Row 1 */
@@ -1584,6 +1603,66 @@
   .applications-five-card:nth-child(5) {
     grid-column: auto;
     padding: 1.35rem 1.15rem;
+  }
+}
+
+/* About Page: What We Provide 5 Cards Grid (3 in Top Row, 2 in Bottom Row) */
+.about-provide-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.about-provide-card {
+  grid-column: span 2;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.about-provide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+/* Desktop: 3 cards in Row 1, 2 cards centered in Row 2 */
+.about-provide-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.about-provide-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+@media (max-width: 1024px) {
+  .about-provide-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  .about-provide-card {
+    grid-column: span 2;
+  }
+
+  .about-provide-card:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .about-provide-card:nth-child(5) {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-provide-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-provide-card,
+  .about-provide-card:nth-child(4),
+  .about-provide-card:nth-child(5) {
+    grid-column: span 1 !important;
   }
 }
 
@@ -2174,8 +2253,16 @@
 
 .contact-person-actions {
   display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+.contact-person-actions .btn {
+  white-space: nowrap;
+  padding: 0.44rem 0.65rem;
+  font-size: 0.72rem;
+  justify-content: center;
 }
 
 .form-title {
@@ -2943,7 +3030,7 @@ a.footer-contact-val:hover {
 
 .location-split-card {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 52% 48%;
   align-items: stretch;
   background: var(--color-white);
   border: 1px solid var(--color-border);
@@ -3175,7 +3262,7 @@ a.footer-contact-val:hover {
 
 /* Right Column: Company Location Details */
 .location-info-col {
-  padding: 4rem 3.5rem;
+  padding: 3.5rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3196,12 +3283,13 @@ a.footer-contact-val:hover {
 
 .location-heading {
   font-family: 'Poppins', var(--font-heading);
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--color-text-blue);
   line-height: 1.25;
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 .location-supporting-text {
@@ -3293,7 +3381,8 @@ a.footer-contact-val:hover {
     padding: 2.25rem 1.25rem;
   }
   .location-heading {
-    font-size: 1.7rem;
+    font-size: clamp(1.2rem, 5.5vw, 1.65rem);
+    white-space: nowrap;
   }
   .location-address-text {
     font-size: 1rem;
