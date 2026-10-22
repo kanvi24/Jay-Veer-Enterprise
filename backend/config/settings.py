@@ -176,7 +176,7 @@ REST_FRAMEWORK = {
 # Allow frontend development origins
 raw_cors = os.getenv(
     'CORS_ALLOWED_ORIGINS',
-    'http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174'
+    'http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174,https://jay-veer-enterprise.vercel.app'
 )
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in raw_cors.split(',') if origin.strip()]
 CORS_ALLOW_CREDENTIALS = True
