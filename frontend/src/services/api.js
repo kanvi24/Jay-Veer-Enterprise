@@ -38,6 +38,11 @@ export function getMediaUrl(imagePath, slug = "") {
     return imagePath;
   }
 
+  // If static frontend asset path (public/assets/...), keep it relative to frontend
+  if (imagePath.startsWith("/assets/") || imagePath.startsWith("assets/")) {
+    return imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
+  }
+
   // Strip leading slash if needed and append to backend base URL
   const cleanPath = imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
   return `${BACKEND_BASE_URL}${cleanPath}`;

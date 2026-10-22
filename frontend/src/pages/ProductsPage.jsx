@@ -153,7 +153,8 @@ export default function ProductsPage({ onOpenQuoteModal }) {
                               "color-masterbatch": "/assets/products/color-masterbatch.jpg",
                               "custom-plastic-colors": "/assets/products/custom-plastic-colors.webp",
                             }[productSlug];
-                            if (fallback && !e.currentTarget.src.includes(fallback)) {
+                            const fallbackUrl = fallback ? (window.location.origin + fallback) : null;
+                            if (fallback && e.currentTarget.src !== fallbackUrl) {
                               e.currentTarget.src = fallback;
                             } else {
                               e.currentTarget.onerror = null;

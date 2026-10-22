@@ -1,0 +1,77 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Filler Granules",
+    "slug": "filler-granules",
+    "short_description": "High-grade mineral-filled polymer granules designed to optimize compounding economics, enhance structural stiffness, and provide superior surface smoothness.",
+    "description": "Jay Veer Enterprise's Filler Granules are formulated with micronized calcium carbonate and high-grade carrier polymers. Designed for plastic processors seeking cost optimization without compromising mechanical integrity, our filler granules ensure exceptional dispersion, higher heat deflection resistance, and seamless processability across extrusion and molding lines.",
+    "applications": "Woven Sacks & Raffia Tapes, Blow Moulding Containers, Injection Moulding Household Items, Extrusion Sheets & Films, Carry Bags & Packaging Liners",
+    "image": "products/filler-granules.png",
+    "is_active": true,
+    "created_at": "2026-09-24T07:54:49.523Z",
+    "updated_at": "2026-09-28T11:01:35.489Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "LD Granules",
+    "slug": "ld-granules",
+    "short_description": "Premium Low-Density Polyethylene (LDPE) granules offering superior flexibility, optical clarity, puncture resistance, and seamless melt processing.",
+    "description": "Our LD Granules are selected for their excellent processability, elasticity, and clean melt profile. Widely deployed across plastic film extrusion, flexible packaging, squeeze containers, and general plastic goods, these granules deliver balanced melt flow and high burst resistance.",
+    "applications": "Packaging Films & Shrink Wraps, Agricultural Sheets & Greenhouse Films, Plastic Carry Bags & Liners, Squeeze Bottles & Closures, Extrusion Coatings & Lamination",
+    "image": "products/ld-granules.jpg",
+    "is_active": true,
+    "created_at": "2026-09-24T07:54:49.526Z",
+    "updated_at": "2026-09-28T11:01:35.496Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Reprocessed Granules",
+    "slug": "reprocessed-granules",
+    "short_description": "Cost-effective, screened recycled polymer granules delivering reliable performance for industrial molding, non-critical packaging, and infrastructure goods.",
+    "description": "Engineered through precision sorting, washing, and multi-mesh melt filtration extruders. Our reprocessed plastic granules provide consistent physical properties while reducing raw material carbon footprint and procurement costs.",
+    "applications": "Industrial Pipes & Conduits, Heavy-Duty Transport Crates, Garbage Liners & Tarpaulins, Plastic Pallets, Household Utilities & Planters",
+    "image": "products/reprocessed-granules.webp",
+    "is_active": true,
+    "created_at": "2026-09-24T07:54:49.530Z",
+    "updated_at": "2026-09-28T11:01:35.499Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Color Masterbatch",
+    "slug": "color-masterbatch",
+    "short_description": "Concentrated pigment masterbatches delivering vibrant, uniform dispersion, high thermal stability, and light-fast color solutions for plastics.",
+    "description": "Formulated with ultra-fine pigment concentrations and high melt index carrier resins. Ensures seamless blending during extrusion and injection moulding without streaking or pigment agglomeration.",
+    "applications": "Blown Film Coloring, Injection Moulded Caps & Closures, Rotomoulded Tanks, Extruded Profiles, Consumer Durables & Toys",
+    "image": "products/color-masterbatch.jpg",
+    "is_active": true,
+    "created_at": "2026-09-24T07:54:49.533Z",
+    "updated_at": "2026-09-28T11:01:35.503Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Custom Plastic Colors",
+    "slug": "custom-plastic-colors",
+    "short_description": "Tailor-made color compounds engineered to exact Pantone, RAL, or physical sample requirements with tight shade tolerance.",
+    "description": "Our compounding laboratory matches target shade panels and delivers bespoke pre-colored compounds. Eliminates in-house pigment dosing errors and guarantees lot-to-lot color repeatability.",
+    "applications": "Automotive Interior Trim, Electronics Housings, Custom Cosmetic Bottles, Branded Packaging, Specialized Houseware Products",
+    "image": "products/custom-plastic-colors.webp",
+    "is_active": true,
+    "created_at": "2026-09-24T07:54:49.536Z",
+    "updated_at": "2026-09-28T11:01:35.506Z"
+  }
+}
+]
