@@ -22,6 +22,29 @@ import ContactPage from "./pages/ContactPage";
 
 import "./App.css";
 
+function AdminRedirect() {
+  React.useEffect(() => {
+    window.location.href = "https://jay-veer-enterprise.onrender.com/admin/";
+  }, []);
+
+  return (
+    <div style={{ textAlign: "center", padding: "6rem 2rem", minHeight: "50vh" }}>
+      <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem", color: "var(--color-navy)" }}>
+        Redirecting to Admin Portal...
+      </h2>
+      <p style={{ color: "var(--color-text-muted)" }}>
+        Taking you to Jay Veer Enterprise Django Admin. If not redirected automatically,{" "}
+        <a
+          href="https://jay-veer-enterprise.onrender.com/admin/"
+          style={{ color: "var(--color-orange)", textDecoration: "underline" }}
+        >
+          click here to open Admin
+        </a>.
+      </p>
+    </div>
+  );
+}
+
 export default function App() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [selectedProductForQuote, setSelectedProductForQuote] = useState(null);
@@ -100,6 +123,8 @@ export default function App() {
                   element={<Navigate to="/" replace />}
                 />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/admin" element={<AdminRedirect />} />
+                <Route path="/admin/*" element={<AdminRedirect />} />
                 {/* Fallback route */}
                 <Route
                   path="*"

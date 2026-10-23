@@ -1,0 +1,22 @@
+{
+  "buildCommand": "npm run build --prefix frontend",
+  "outputDirectory": "frontend/dist",
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://jay-veer-enterprise.onrender.com/admin/",
+      "permanent": false
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "https://jay-veer-enterprise.onrender.com/admin/:path*",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
