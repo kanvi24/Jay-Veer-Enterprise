@@ -326,6 +326,18 @@ export default function HomePage({ onOpenQuoteModal, onSelectProductForQuote }) 
             </div>
           )}
 
+          {!productsLoading && !productsError && products.length === 0 && (
+            <div style={{ textAlign: "center", padding: "3rem 1.5rem", background: "#fff", border: "1px solid #e2e8f0", borderRadius: "var(--radius-md)", marginBottom: "2rem" }}>
+              <Package size={36} style={{ color: "var(--color-text-muted)", margin: "0 auto 0.75rem" }} />
+              <h4 style={{ fontSize: "1.15rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>
+                No Products Available
+              </h4>
+              <p style={{ color: "var(--color-text-muted)", fontSize: "0.95rem", maxWidth: "480px", margin: "0 auto" }}>
+                Our product catalog is currently being updated. Please check back shortly or reach out to our team directly for inquiries.
+              </p>
+            </div>
+          )}
+
           <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
             <Link to="/products" className="btn btn-blue">
               <span>VIEW FULL PRODUCT CATALOG</span>

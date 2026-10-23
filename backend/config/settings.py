@@ -31,9 +31,12 @@ DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = [
     host.strip()
-    for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+    for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,jay-veer-enterprise.onrender.com,.onrender.com').split(',')
     if host.strip()
 ]
+for h in ['jay-veer-enterprise.onrender.com', '.onrender.com']:
+    if h not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append(h)
 
 # Application definition
 INSTALLED_APPS = [
@@ -105,6 +108,7 @@ if db_engine == 'django.db.backends.mysql':
                 'charset': 'utf8mb4',
                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
                 'ssl': {},
+                'connect_timeout': 5,
             },
         }
     }
@@ -179,5 +183,10 @@ raw_cors = os.getenv(
     'http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174,https://jay-veer-enterprise.vercel.app'
 )
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in raw_cors.split(',') if origin.strip()]
+if 'https://jay-veer-enterprise.vercel.app' not in CORS_ALLOWED_ORIGINS:
+    CORS_ALLOWED_ORIGINS.append('https://jay-veer-enterprise.vercel.app')
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://jay-veer-enterprise.*\.vercel\.app$",
+]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = False  # Explicitly prevent insecure wildcard configuration
