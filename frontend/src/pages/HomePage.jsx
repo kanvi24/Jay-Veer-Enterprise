@@ -24,7 +24,8 @@ import {
   Car,
   Clock,
   Loader2,
-  AlertCircle
+  AlertCircle,
+  RefreshCw
 } from "lucide-react";
 import SectionTitle from "../components/SectionTitle";
 import ProductCard from "../components/ProductCard";
@@ -36,7 +37,7 @@ import { getTelLink, getMailtoLink, getWhatsAppLink } from "../services/api";
 
 export default function HomePage({ onOpenQuoteModal, onSelectProductForQuote }) {
   const { company, fullAddress } = useCompany();
-  const { products, loading: productsLoading, error: productsError } = useProducts();
+  const { products, loading: productsLoading, error: productsError, refetchProducts } = useProducts();
 
   useEffect(() => {
     document.title = "Jay Veer Enterprise | Quality Plastic Granules for Reliable Manufacturing";
@@ -303,14 +304,33 @@ export default function HomePage({ onOpenQuoteModal, onSelectProductForQuote }) 
           {productsLoading && (
             <div style={{ textAlign: "center", padding: "3rem 0" }}>
               <Loader2 size={32} className="spinner-icon" style={{ margin: "0 auto 0.75rem", color: "var(--color-secondary)" }} />
-              <p style={{ color: "var(--color-text-muted)" }}>Loading active products from API...</p>
+              <p style={{ color: "var(--color-navy)", fontWeight: 500, marginBottom: "0.25rem" }}>
+                Connecting to Product Catalog...
+              </p>
+              <p style={{ color: "var(--color-text-muted)", fontSize: "0.85rem" }}>
+                Cloud service may take a moment to wake up on first visit.
+              </p>
             </div>
           )}
 
           {!productsLoading && productsError && (
-            <div style={{ textAlign: "center", padding: "2rem", background: "#fff", border: "1px solid #fee2e2", borderRadius: "var(--radius-md)", marginBottom: "2rem" }}>
-              <AlertCircle size={28} style={{ color: "#ef4444", margin: "0 auto 0.5rem" }} />
-              <p style={{ color: "var(--color-text-muted)" }}>Unable to load this information right now. Please try again later.</p>
+            <div style={{ textAlign: "center", padding: "2.5rem 1.5rem", background: "#fff", border: "1px solid #fee2e2", borderRadius: "var(--radius-md)", marginBottom: "2rem" }}>
+              <AlertCircle size={32} style={{ color: "#ef4444", margin: "0 auto 0.75rem" }} />
+              <h4 style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>
+                Unable to Load Products
+              </h4>
+              <p style={{ color: "var(--color-text-muted)", fontSize: "0.95rem", maxWidth: "480px", margin: "0 auto 1.25rem" }}>
+                {productsError}
+              </p>
+              <button
+                type="button"
+                className="btn btn-blue btn-sm"
+                onClick={refetchProducts}
+                style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.55rem 1.25rem", margin: "0 auto" }}
+              >
+                <RefreshCw size={14} />
+                <span>Retry Connection</span>
+              </button>
             </div>
           )}
 

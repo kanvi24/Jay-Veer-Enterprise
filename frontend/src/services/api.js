@@ -91,7 +91,7 @@ export function getMailtoLink(email, subject = "Business Enquiry - Jay Veer Ente
  */
 export async function getCompany() {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 10000);
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
 
   try {
     const response = await fetch(`${API_BASE_URL}/company/`, {
@@ -112,7 +112,7 @@ export async function getCompany() {
     return await response.json();
   } catch (error) {
     if (error.name === "AbortError") {
-      console.warn("Company API request timed out after 10s");
+      console.warn("Company API request timed out after 30s");
     }
     if (error.message.includes("Unable to load")) {
       throw error;
@@ -130,7 +130,7 @@ export async function getCompany() {
  */
 export async function getProducts() {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 10000);
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
 
   try {
     const response = await fetch(`${API_BASE_URL}/products/`, {
@@ -147,9 +147,10 @@ export async function getProducts() {
     return Array.isArray(data) ? data : [];
   } catch (error) {
     if (error.name === "AbortError") {
-      console.warn("Products API request timed out after 10s");
+      console.warn("Products API request timed out after 30s (Render cold start)");
+      throw new Error("Server took longer than expected to wake up. Please click Retry.");
     }
-    if (error.message.includes("Unable to load")) {
+    if (error.message.includes("Unable to load") || error.message.includes("Retry")) {
       throw error;
     }
     throw new Error("Unable to load this information right now. Please try again later.");
